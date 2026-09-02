@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<div class="uk-position-relative uk-visible-toggle uk-light" 
+     uk-slideshow="autoplay: true; animation: slide; pause-on-hover: false; ratio: false">
+
+  <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true">
+
+    <!-- SLIDE 1 -->
+    <li>
+      <div class="uk-position-relative uk-height-1-1">
+        <img data-src="imagens/palestra-e-workshop/hero-palestra-e-workshop.webp" uk-img alt="Hero Image" class="uk-visible@s" uk-cover>
+        <img data-src="imagens/palestra-e-workshop/hero-palestra-e-workshop-mobile.webp" uk-img class="uk-hidden@s" style="object-position: center top;" uk-cover alt="Hero Image Mobile">
+      </div>
+
+      <div class="uk-container">
+        <div class="uk-position-center-left uk-text-left text uk-padding-large conteudo">
+          <h1 class="titulo"
+        style="color: #1E3A5F; font-family: 'sora'; max-width: 500px; font-size: 2rem; font-weight: 200;">
+        <strong style="color: #8B4789;">Palestras</strong> e
+        <strong style="color: #2563EB;">Workshops</strong>
+        para transformar equipas
+    </h1>
+
+    <p style="color: #4B5563; font-family: 'sora'; max-width: 450px;">
+        Promovemos experiências inspiradoras e práticas que fortalecem competências,
+        estimulam a reflexão e impulsionam o desenvolvimento humano, criando equipas
+        mais conscientes, colaborativas e preparadas para os desafios do dia a dia.
+    </p>
+
+    <a (click)="scrollToForm()"
+       class="uk-button uk-button-default animated-btn"
+       style="font-family: 'sora'; color: white; border-radius: 5px;">
+        Solicitar Proposta
+        <span uk-icon="icon: arrow-right"></span>
+    </a>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- DOTNAV CORRETO -->
+  <ul class="uk-dotnav uk-slideshow-nav uk-position-center-right uk-position-medium uk-flex uk-flex-column">
+    <li uk-slideshow-item="0"><a href="#"></a></li>
+    <li uk-slideshow-item="1"><a href="#"></a></li>
+    <li uk-slideshow-item="2"><a href="#"></a></li>
+  </ul>
+
+</div>
+
+<!-- Formulário de P7 Mentoria -->
+<div id="formulario" style="scroll-behavior: smooth;">
+  <app-form-palestra></app-form-palestra>
+</div>
+
+<app-footer></app-footer>

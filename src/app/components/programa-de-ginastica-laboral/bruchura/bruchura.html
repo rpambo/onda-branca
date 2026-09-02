@@ -1,0 +1,37 @@
+<div class="uk-container uk-section-large" style="background-color: #7945a9;">
+  <div class="uk-child-width-1-2@l uk-grid-large uk-flex-middle uk-grid">
+    <h2 class="uk-margin-remove titulo-metricas" style="font-family: 'sora';" uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500">
+            <span class="titulo-principal">Baixar <span class="linha"></span></span>
+            <span class="uk-text-light"> <span style="color: white; font-weight: bold;"> Gostaria de receber a brochura <span style="color: #00d02a;">Programa de Ginástica Laboral</span> ?</span> </span>
+          </h2>
+
+    <!-- Formulário -->
+    <div>
+      <form [formGroup]="form" (submit)="submitForm()" class="uk-form-stacked">
+        <div class="uk-flex uk-flex-middle uk-flex-wrap uk-child-width-1-1@s uk-child-width-auto@m">
+          <div class="uk-width-expand">
+            <input class="uk-input" 
+              style="flex: 1; background-color: transparent; border: 1px solid #717378; font-weight: 500; font-size: 18px; height: auto; padding: 12px; color: white;" 
+              placeholder="Seu melhor e-mail..." 
+              type="email" 
+              required
+             formControlName="email"
+             [ngStyle]="{'border': form.get('email')?.invalid && (form.get('email')?.dirty || form.get('emial')?.touched || isSubmit) ? '2px solid #f0506e' : '2px solid #d1d1d1'}"
+            >
+          </div>
+          <div>
+            <button 
+            type="submit" 
+            class="uk-button uk-button-default" 
+            style="background-color: white; border-bottom-right-radius: 5px; border-top-right-radius: 5px; font-size: 18px; padding: 8px 15px 8px 15px; color: #00d02a; font-weight: 500;"
+          >
+            Solicitar
+          </button>
+          <!-- Loading spinner -->
+          <div *ngIf="isLoading" class="spinner"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

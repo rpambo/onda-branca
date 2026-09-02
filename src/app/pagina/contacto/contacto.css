@@ -1,0 +1,122 @@
+.back{
+  background-image: url("/imagens/contacto/contacto-topo.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+
+.uk-card-default{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+a[uk-slider-item].uk-invisible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.titulo-principal {
+  font-size: 16px;
+  color: #094268;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-principal .linha {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #00aaff, #0d5a90);
+  display: block;
+  animation: grow 2s infinite alternate;
+}
+
+.titulo-metricas{
+  max-width: 750px;
+}
+
+@keyframes growMobile {
+  from { width: 0; }
+  to { width: 25%; }
+}
+
+@keyframes grow {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+@media (max-height: 700px) {
+  .titulo{
+    font-size: 2.5rem !important;
+    max-width: 450px !important;
+  }
+}
+
+
+@media (max-width:768px) {
+  .uk-slider-container{
+    padding-right: 0 !important;
+  }
+  .back{
+    padding-top: 50px !important;
+  }
+
+  .titulo-principal{
+    display: block;
+  }
+  h2, .destaque{
+    font-size: 1.6rem !important;
+  }
+
+  .titulo-principal .linha{
+    width: 25%;
+    animation: growMobile 2s infinite alternate;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .back {
+    height: 50vh !important;
+  }
+  
+  .conteudo{
+    margin-bottom: 20px !important;
+  }
+}
+
+
+@media (min-width:344px) and (max-width: 767px) {
+  .conteudo {
+    position: static !important;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    transform: none;
+    text-align: center;
+    padding: 20px;
+  }
+  .back {
+    height: 65vh !important;
+    background-image: url("/imagens/contacto/contacto-topo-mobile.webp") !important;
+    background-position: center top;
+  }   
+
+  .titulo{
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: clamp(1.8rem, 100vw, 1.4rem) !important;
+  }
+  .titulo-p7{
+    font-size: 2rem !important;
+  }
+}

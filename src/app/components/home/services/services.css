@@ -1,0 +1,121 @@
+.texto-com-reticencias {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 2 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  /* Adicione estas propriedades */
+  word-break: break-word; /* Quebra palavras longas */
+  max-width: 100%; /* Garante que respeite o container pai */
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none !important;
+}
+a:hover{
+  text-decoration: underline !important;
+}
+
+.back{
+    background-image: url("/imagens/background/noise-light.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("/imagens/background/grid.svg") center / auto repeat;
+
+    pointer-events: none;
+}
+
+.uk-card-default{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+a[uk-slider-item].uk-invisible {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.titulo-principal {
+  font-size: 16px;
+  color: #094268;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  font-family: 'sora' !important;
+}
+
+.titulo-principal .linha {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #00aaff, #0d5a90);
+  display: block;
+  animation: grow 2s infinite alternate;
+}
+
+.uk-text-light{
+  font-family: 'sora' !important;
+}
+
+.titulo-metricas{
+  max-width: 750px;
+}
+
+@keyframes growMobile {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes grow {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+@media (max-width:768px) {
+  .uk-slider-container{
+    padding-right: 0 !important;
+  }
+  .back{
+    padding-top: 50px !important;
+  }
+
+  .titulo-principal{
+    display: block;
+  }
+  h2, .destaque{
+    font-size: 1.6rem !important;
+  }
+
+  .titulo-principal .linha{
+    width: 25%;
+    animation: growMobile 2s infinite alternate;
+  }
+}
+
+@media (min-width:344px) and (max-width:767px) {
+  .titulo-principal{
+    display: block !important;
+    margin-top: 20px !important;
+  }
+  .titulo-principal .linha{
+    left: 20% !important;
+    animation: growMobile 2s infinite alternate;
+  }
+  .uk-container{
+    text-align: center !important;
+  }
+}

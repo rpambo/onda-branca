@@ -1,0 +1,315 @@
+.btn-gradient-animated {
+  margin-top: 25px;
+  color: #fff;
+  background: linear-gradient(
+    120deg,
+    #6A00F4,
+    #9D4EDD,
+    #B5179E,
+    #6A00F4
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* animação */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* hover brilhante */
+.btn-gradient-animated:hover {
+  animation-duration: 3s;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 8px rgba(157, 78, 221, 0.6),
+    0 0 20px rgba(181, 23, 158, 0.5),
+    0 0 40px rgba(106, 0, 244, 0.4);
+}
+
+/* opcional: foco acessível */
+.btn-gradient-animated:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.25),
+    0 0 25px rgba(157, 78, 221, 0.6);
+}
+
+/* =====================================
+   ACESSIBILIDADE
+   ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-blue-alive {
+    animation: none;
+  }
+  
+  .btn-blue-alive:hover {
+    animation: none;
+  }
+  
+  .btn-blue-alive:active {
+    transform: scale(0.98);
+  }
+}
+
+/* =====================================
+   VARIANTE COM MAIS INCLINAÇÃO
+   ===================================== */
+
+.btn-blue-alive.tilt-more:hover {
+  animation: 
+    gradientMove 5s ease-in-out infinite,
+    tiltMore 0.8s ease-in-out infinite;
+}
+
+@keyframes tiltMore {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  
+  25% {
+    transform: rotate(5deg) translateX(5px);
+  }
+  
+  50% {
+    transform: rotate(-4deg) translateX(-4px);
+  }
+  
+  75% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+/* =====================================
+   VARIANTE COM INCLINAÇÃO CONTÍNUA
+   ===================================== */
+
+.btn-blue-alive.tilt-wave {
+  animation: 
+    gradientMove 7s ease-in-out infinite,
+    waveTilt 3s ease-in-out infinite;
+}
+
+@keyframes waveTilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(2deg);
+  }
+  
+  50% {
+    transform: rotate(0deg);
+  }
+  
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.back{
+  background-image: url(/imagens/asset1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.back-canva{
+  background-image: url(/imagens/asset1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
+
+#offcanvas-nav {
+  display: none;
+}
+
+.uk-offcanvas-bar {
+  visibility: hidden;
+}
+
+.uk-offcanvas.uk-open .uk-offcanvas-bar {
+  visibility: visible;
+}
+
+.custom-navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0;
+  z-index: 3;
+  background-color: rgba(103, 103, 103, 0.466);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.176);
+
+   /* TRANSIÇÃO SUAVE */
+  transition: transform 0.5s ease, opacity 0.9s ease, background-color 0.9s ease, backdrop-filter 0.9s ease;
+}
+
+.uk-navbar-nav li a {
+  font-size: 1rem !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+}
+
+.custom-navbar:hover {
+  background-color: #00224bec !important;
+}
+
+.uk-drop-grid {
+  position: relative; /* precisa para o pseudo-elemento */
+}
+
+.uk-drop-grid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%; /* meio exato */
+  width: 1px;
+  background: #dcdcdc; /* cor da linha */
+}
+
+.uk-button::first-letter{
+  text-transform: uppercase;
+}
+
+.uk-button {
+  text-transform: lowercase;
+  position: relative;
+  overflow: hidden;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: lowercase;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+/* estado normal */
+.uk-navbar-dropdown .uk-navbar-dropdown-nav li > a.dropdown-link {
+  font-size: 18px;
+  color: #272727 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ul li a:hover{
+  color: #1E3A5F !important;
+}
+
+/* hover */
+.uk-navbar-dropdown .uk-navbar-dropdown-nav li > a.dropdown-link:hover {
+  color: #1E3A5F !important;
+  text-decoration: underline;
+}
+
+
+/* animação quando hover */
+.uk-button:hover {
+  color: white !important;
+  border: none !important;
+  animation: spreadRegroup 600ms ease forwards;
+}
+
+@keyframes spreadRegroup {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.08); } /* espalha */
+  100% { transform: scale(1); }   /* volta ao normal */
+}
+
+.uk-button:hover::after {
+  width: 250%;
+  height: 250%;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.uk-nav .uk-parent > a {
+  position: relative; /* importante para posicionar o ::after */
+}
+
+.uk-nav .uk-parent > a::after {
+  content: "▼"; /* ou ▸ */
+  font-size: 0.7em;
+  color: #666;
+  position: absolute;
+  right: 10px; /* encosta à direita do <a> */
+  top: 50%;
+  transform: translateY(-50%); /* centraliza verticalmente */
+}
+
+
+.uk-nav .uk-parent.uk-open > a::after {
+  content: "▲"; /* muda para cima */
+}
+
+/* Dividers no menu principal */
+#offcanvas-nav .uk-nav > li {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+#offcanvas-nav .uk-nav > li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Dividers nos submenus */
+#offcanvas-nav .uk-nav-sub > li {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+#offcanvas-nav .uk-nav-sub > li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Dividers na lista de redes sociais */
+#offcanvas-nav .uk-list-divider > li {
+  border-bottom: 1px solid #e5e5e5; /* mesma cor */
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+#offcanvas-nav .uk-list-divider > li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+hr{
+  border-bottom: 1px solid #e5e5e5; /* mesma cor */
+  margin-bottom: 0;
+}
+
+
+.uk-navbar-nav > li.uk-active > a {
+  color: #1E3A5F !important; /* cor para ativo */
+  font-weight: 600;
+}

@@ -1,0 +1,125 @@
+.titulo-principal {
+  font-size: 16px;
+  color: #094268;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-principal .linha {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #00aaff, #0d5a90);
+  display: block;
+  animation: grow 2s infinite alternate;
+}
+
+.titulo-metricas{
+  max-width: 750px;
+}
+
+@keyframes growMobile {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes grow {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+.uk-grid > div{
+    margin-top: 20px;
+}
+.title{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    color: #272727;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.text-servico.reveal-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.text-servico {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-servico{
+    font-size: 2rem;
+    font-family: "Urbanist";
+    color: #1253C6;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.card.reveal-fade{
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.reveal-active.card{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (min-width: 344px) and (max-width: 767px){
+  h2, .destaque{
+    font-size: 1.6rem !important;
+  }
+  img{
+    width: 55%;
+    margin: auto;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .text-servico{
+    font-size: 2rem !important;
+  }
+
+  .titulo-principal{
+    display: block;
+  }
+  h2, .destaque{
+    font-size: 1.6rem !important;
+  }
+
+  .titulo-principal .linha{
+    width: 25%;
+    animation: growMobile 2s infinite alternate;
+  }
+  .titulo-metricas{
+    max-width: 100%;
+  }
+}
+
+@media (min-width:344px) and (max-width:767px) {
+  .titulo-principal{
+    display: block !important;
+    margin-top: 20px !important;
+  }
+  .titulo-principal .linha{
+    left: 17% !important;
+    animation: growMobile 2s infinite alternate;
+  }
+  .uk-container{
+    text-align: center !important;
+  }
+}

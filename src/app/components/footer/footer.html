@@ -1,0 +1,100 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+<div class="uk-section efeito-cantos uk-section-medium" style="background-color: #000; position: relative; z-index: 1; padding-bottom: 20px;">
+  <div class="circulo"></div>
+
+  <div class="uk-container">
+    <div class="uk-child-width-1-5@l uk-child-width-1-4@s uk-child-width-1-4@m uk-grid">
+
+      <!-- Logo + lema -->
+      <div>
+        <img data-src="imagens/logos/logo-onda-branca.svg" uk-img width="120" alt="Onda Branca">
+        <p style="font-size: 0.85rem; color: #ccc; margin-top: 10px; line-height: 1.4;">
+          Saúde mental, produtividade<br>e comunidade.
+        </p>
+      </div>
+
+      <div>
+        <h3>Serviços</h3>
+        <ul class="uk-list">
+          <li><a [routerLink]="['/programa-de-saude-emocional-do-trabalhador']">Programa de saúde mental no trabalho</a></li>
+          <li><a [routerLink]="['/programa-de-saude-emocional-do-trabalhador-mentoria']">Programa de saúde mental no trabalho - Mentoria</a></li>
+          <li><a [routerLink]="['/projecto-de-qualidade-de-vida']">Projecto de qualidade de vida</a></li>
+          <li><a [routerLink]="['/programa-de-ginastica-laboral']" >Programa de Ginástica Laboral</a></li>
+          <li><a [routerLink]="['/palestra-e-workshop']">Palestras e workshops</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Mídia</h3>
+        <ul class="uk-list">
+          <li><a href="javascript:void(0)">Podcast</a></li>
+          <li><a href="javascript:void(0)">Blog</a></li>
+          <hr>
+          <li><a [routerLink]="['/canal-de-reclamacao']">Canal de reclamacao</a></li>
+          <p style="font-size: .8rem; color: white;">
+            Programa Onda Branca – Rádio Solidária | 90.7 FM <br>
+            Todos os sábados · 9h – 10h
+          </p>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Conexão</h3>
+        <ul class="uk-list">
+          <li><a href="">Comunidade</a></li>
+          <li><a href="javascript:void(0)">Agenda</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociais e contactos -->
+      <div>
+        <h3>Redes sociais</h3>
+
+        <div class="uk-flex icon  uk-flex-middle uk-grid-small" uk-grid>
+          <a href="" class="uk-flex-middle" uk-tooltip="Instagram" style="font-size: 1rem;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="" uk-tooltip="Facebook" style="font-size: 1rem;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="" uk-tooltip="LinkedIn" style="font-size: 1rem;">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="" class="" uk-tooltip="YouTube" style="font-size: 1rem;">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="" uk-tooltip="Spotify" style="font-size: 1rem;" >
+            <i class="fab fa-spotify"></i>
+          </a>
+        </div>
+
+        <p style="margin-top: 15px; font-size: 1rem;">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:geral@ondabranca.com"> geral@ondabrancaangola.com</a> <br>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+2449222222222"> (+244) 945 348 723</a>
+        </p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="uk-flex icon uk-flex-between uk-flex-middle uk-flex-wrap">
+      <div>
+        <p>
+          Copyright &copy; {{currentYear}} •
+          Todos os direitos reservados para Onda Branca.
+        </p>
+      </div>
+      <div>
+        <a [routerLink]="['/politica-de-privacidade']" >Política de privacidade</a> |
+        <a [routerLink]="['/termo-de-uso']">Termos de uso</a>
+      </div>
+    </div>
+  </div>
+</div>

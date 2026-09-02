@@ -1,0 +1,237 @@
+.back{
+  background-image: url(/imagens/home/back-ground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@font-face {
+  font-family: 'Joyride';
+  src: url('/Joyride-Font/JoyrideSTD.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'joryde';
+  src: url('/Joyride-Font/JoyrideALT.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.titulo-principal {
+  font-size: 1rem;
+  color: #094268;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-principal .linha {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #00aaff, #0d5a90);
+  display: block;
+  animation: grow 2s infinite alternate;
+}
+
+.onda-branca-animada {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 20px 0;
+}
+
+.onda-loop {
+  display: flex;
+  width: max-content; /* deixa o container com o tamanho real do conteúdo */
+  animation: deslize 50s linear infinite;
+}
+
+.faixa {
+  display: flex;
+}
+
+.frase {
+  font-family: 'Joyride';
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #c4c4c4a1;
+  margin-right: 3rem;
+}
+
+/* animação infinita sem travamento */
+@keyframes deslize {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* só metade, porque vais duplicar o conteúdo */
+  }
+}
+
+
+/* este cara substitui o padding */
+.espaco {
+  display: inline-block;
+  width: 3rem; /* mesmo valor que usavas no padding */
+}
+
+/* estica-letras */
+.x {
+  font-family: 'joryde';
+}
+
+
+@keyframes deslize {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-60%);
+  }
+}
+
+
+
+.titulo-metricas{
+  max-width: 750px;
+}
+
+@keyframes growMobile {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes grow {
+    from { width: 20%; }
+    to { width: 80%; }
+}
+
+
+
+.uk-button{
+  text-transform: lowercase;
+}
+
+.uk-button::first-letter{
+  text-transform: uppercase;
+}
+
+
+/* =====================================
+   BOTÃO AZUL – MOVIMENTO E INCLINAÇÃO
+   ===================================== */
+
+.btn-gradient-animated {
+  margin-top: 25px;
+  color: #fff;
+  background: linear-gradient(
+    120deg,
+    #6A00F4,
+    #9D4EDD,
+    #B5179E,
+    #6A00F4
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* animação */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* hover brilhante */
+.btn-gradient-animated:hover {
+  animation-duration: 3s;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 8px rgba(157, 78, 221, 0.6),
+    0 0 20px rgba(181, 23, 158, 0.5),
+    0 0 40px rgba(106, 0, 244, 0.4);
+}
+
+/* opcional: foco acessível */
+.btn-gradient-animated:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.25),
+    0 0 25px rgba(157, 78, 221, 0.6);
+}
+
+
+/* =====================================
+   INCLINAÇÃO EM RESPOSTA AO GRADIENTE
+   ===================================== */
+
+.btn-gradient-animated:hover {
+  animation: 
+    gradientMove 7s ease-in-out infinite,
+    tiltEffect 0.5s ease-in-out;
+}
+
+@keyframes tiltEffect {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  
+  25% {
+    transform: rotate(3deg) translateX(3px);
+  }
+  
+  50% {
+    transform: rotate(-2deg) translateX(-2px);
+  }
+  
+  75% {
+    transform: rotate(1deg) translateX(1px);
+  }
+  
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+/* =====================================
+   HOVER COM BRILHO E SOMBRA
+   ===================================== */
+
+@media (min-width:344px) and (max-width:767px) {
+  .img{
+    text-align: center !important;
+  }
+  .uk-card{
+    padding: 20px !important;
+    text-align: center !important;
+  }
+
+  .titulo-principal{
+    display: block !important;
+    margin-top: 20px !important;
+  }
+  
+  .titulo-principal .linha{
+    left: 17% !important;
+    animation: growMobile 2s infinite alternate;
+  }
+}

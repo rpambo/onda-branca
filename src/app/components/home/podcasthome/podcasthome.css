@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Joyride';
+  src: url('/Joyride-Font/JoyrideSTD.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.back{
+    background-image: url("/imagens/background/noise-dark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("/imagens/background/grid.svg") center / auto repeat;
+
+    pointer-events: none;
+}
+
+@font-face {
+  font-family: 'joryde';
+  src: url('/Joyride-Font/JoyrideALT.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (min-width: 344px) and (max-width: 767px) {
+  .logo {
+    width: 100% !important;
+  }
+  .padd{
+    padding: 0 !important;
+    text-align: center !important;
+  }
+}

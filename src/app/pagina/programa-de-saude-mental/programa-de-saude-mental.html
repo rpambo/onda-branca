@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<div class="uk-position-relative uk-visible-toggle uk-light" 
+     uk-slideshow="autoplay: true; animation: slide; pause-on-hover: false; ratio: false">
+
+  <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true">
+
+    <!-- SLIDE 1 -->
+    <li>
+      <div class="uk-position-relative uk-height-1-1">
+        <img data-src="imagens/p7/hero-p7.webp" uk-img alt="Hero Image" class="uk-visible@s" uk-cover>
+        <img data-src="imagens/p7/hero-p7-mobile.webp" uk-img class="uk-hidden@s" style="object-position: center top;" uk-cover alt="Hero Image Mobile">
+      </div>
+
+      <div class="uk-container">
+        <div class="uk-position-center-left uk-text-left text uk-padding-large conteudo">
+          <h1 class="" style="color: #1E3A5F; font-family: 'sora'; max-width: 500px; font-size: 2rem; font-weight: 200;">Programa de <strong style="color: #2563EB;">saúde  emocional</strong> do trabalhador</h1>
+          <p style="color: #4B5563; font-size: .9rem;font-family: 'sora';">O programa atua na prevenção do stress, na melhoria das relações profissionais e no fortalecimento do bem-estar diário dos colaboradores, começando com ações simples e práticas adaptadas à realidade de cada equipa.</p>
+
+          <a  (click)="scrollToForm()" class="uk-button uk-button-default animated-btn " style="font-family: 'sora'; color: white; border-radius: 5px;">Solicitar Proposta <span uk-icon="icon: arrow-right"></span> </a>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- DOTNAV CORRETO -->
+  <ul class="uk-dotnav uk-slideshow-nav uk-position-center-right uk-position-medium uk-flex uk-flex-column">
+    <li uk-slideshow-item="0"><a href="#"></a></li>
+    <li uk-slideshow-item="1"><a href="#"></a></li>
+    <li uk-slideshow-item="2"><a href="#"></a></li>
+  </ul>
+
+</div>
+
+<!-- Formulário de Saúde Mental -->
+<div id="formulario" style="scroll-behavior: smooth;">
+  <app-form-saude-mental></app-form-saude-mental>
+</div>
+
+<app-footer></app-footer>
