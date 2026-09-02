@@ -32,6 +32,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          source: "dist/bernadinhoAntonio/browser/"
+          source: "dist/Onda_branca/browser/"
           target: "/mnt/home104/ondabran/public_html/"
           strip_components: 3
