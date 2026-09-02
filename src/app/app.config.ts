@@ -8,7 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
-    domain: 'ondasite.vercel.app',
+    domain: 'ondabrancaangola.com',
     secure: true
   },
   
