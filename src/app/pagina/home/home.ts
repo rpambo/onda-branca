@@ -60,19 +60,19 @@ export class Home implements OnInit {
      */
 
     this.titleService.setTitle(
-      'Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
+      'O Movimento Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
     );
 
     this.meta.updateTag({
       name: 'description',
       content:
-        'A Onda Branca é um movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano, através de programas, eventos e iniciativas para pessoas e organizações em Angola.'
+        'O Movimento Onda Branca é um movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano, através de programas, eventos e iniciativas para pessoas e organizações em Angola.'
     });
 
     this.meta.updateTag({
       name: 'author',
       content:
-        'Movimento Onda Branca'
+        'O Movimento Onda Branca'
     });
 
     this.meta.updateTag({
@@ -110,13 +110,13 @@ export class Home implements OnInit {
     this.meta.updateTag({
       property: 'og:title',
       content:
-        'Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
+        'O Movimento Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
     });
 
     this.meta.updateTag({
       property: 'og:description',
       content:
-        'Movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano através de programas, eventos e iniciativas em Angola.'
+        'O Movimento Onda Branca é um movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano através de programas, eventos e iniciativas em Angola.'
     });
 
     this.meta.updateTag({
@@ -128,7 +128,7 @@ export class Home implements OnInit {
     this.meta.updateTag({
       property: 'og:site_name',
       content:
-        'Onda Branca'
+        ' O Movimento Onda Branca'
     });
 
     this.meta.updateTag({
@@ -178,7 +178,7 @@ export class Home implements OnInit {
     this.meta.updateTag({
       property: 'og:image:alt',
       content:
-        'Onda Branca - Saúde Mental, Bem-Estar e Qualidade de Vida'
+        ' O Movimento Onda Branca - Saúde Mental, Bem-Estar e Qualidade de Vida'
     });
 
 
@@ -197,13 +197,13 @@ export class Home implements OnInit {
     this.meta.updateTag({
       name: 'twitter:title',
       content:
-        'Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
+        ' O Movimento Onda Branca | Saúde Mental, Bem-Estar e Qualidade de Vida'
     });
 
     this.meta.updateTag({
       name: 'twitter:description',
       content:
-        'Movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano em Angola.'
+        'O Movimento Onda Branca é um movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano em Angola.'
     });
 
     this.meta.updateTag({
@@ -300,7 +300,7 @@ export class Home implements OnInit {
         'https://ondabrancaangola.com/#organization',
 
       name:
-        'Movimento Onda Branca',
+        'O Movimento Onda Branca',
 
       alternateName:
         'Onda Branca',
@@ -312,7 +312,7 @@ export class Home implements OnInit {
         'https://ondabrancaangola.com/ondaBranca.ico',
 
       description:
-        'Movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano através de programas, eventos e iniciativas em Angola.',
+        'O Movimento Onda Branca é um movimento dedicado à promoção da saúde mental, bem-estar, qualidade de vida e desenvolvimento humano através de programas, eventos e iniciativas em Angola.',
 
       areaServed: {
         '@type':
