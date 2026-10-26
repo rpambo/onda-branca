@@ -4,19 +4,35 @@ import { Navbar } from '../../components/navbar/navbar';
 import { Footer } from '../../components/footer/footer';
 import { FormSaudeMental } from '../../components/formularios/form-saude-mental/form-saude-mental';
 import { Meta, Title } from '@angular/platform-browser';
+import { SolutionContent, SolutionContentComponent } from '../../components/solution-content/solution-content';
 
 @Component({
   selector: 'app-programa-de-saude-mental',
   imports: [
     Navbar,
     Footer,
-    FormSaudeMental   
+    FormSaudeMental,
+    SolutionContentComponent
   ],
   templateUrl: './programa-de-saude-mental.html',
   styleUrls: ['./programa-de-saude-mental.css']
 })
 
 export class ProgramaDeSaudeMental implements OnInit {
+  readonly solutionContent: SolutionContent = {
+    eyebrow: 'Programa de saúde emocional',
+    title: 'Bem-estar emocional',
+    highlight: 'na rotina de trabalho',
+    description: 'Um programa pensado para apoiar a prevenção do stress, melhorar as relações profissionais e fortalecer o bem-estar diário dos colaboradores, com ações adaptadas à realidade de cada equipa.',
+    image: '/imagens/p7/hero-p7.webp',
+    imageAlt: 'Equipa num ambiente de trabalho acolhedor',
+    imageCaption: 'Mais atenção ao bem-estar no dia a dia profissional.',
+    items: [
+      { title: 'Prevenção e consciência', description: 'Promover conversas e práticas que ajudem a reconhecer os desafios emocionais no trabalho.' },
+      { title: 'Relações mais saudáveis', description: 'Incentivar a comunicação e o respeito nas relações entre colegas e lideranças.' },
+      { title: 'Ações para a equipa', description: 'Pensar iniciativas práticas de acordo com o contexto e as necessidades da organização.' }
+    ]
+  };
 
   constructor(private meta: Meta, private titleService: Title, @Inject(PLATFORM_ID) private platformId: Object) {}
 

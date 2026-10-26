@@ -5,14 +5,30 @@ import { Footer } from '../../components/footer/footer';
 import { Bruchura } from '../../components/programa-de-ginastica-laboral/bruchura/bruchura';
 import { FormGinasticaLaboral } from '../../components/formularios/form-ginastica-laboral/form-ginastica-laboral';
 import { Meta, Title } from '@angular/platform-browser';
+import { SolutionContent, SolutionContentComponent } from '../../components/solution-content/solution-content';
 
 @Component({
   selector: 'app-programa-ginastica-laboral',
-  imports: [Navbar, Footer, Bruchura, FormGinasticaLaboral],
+  imports: [Navbar, Footer, Bruchura, FormGinasticaLaboral, SolutionContentComponent],
   templateUrl: './programa-ginastica-laboral.html',
   styleUrl: './programa-ginastica-laboral.css'
 })
 export class ProgramaGinasticaLaboral implements OnInit {
+  readonly solutionContent: SolutionContent = {
+    eyebrow: 'Saúde e movimento no trabalho',
+    title: 'Mais movimento',
+    highlight: 'durante o dia de trabalho',
+    description: 'Exercícios rápidos e orientados que ajudam a aliviar tensões, incentivar o movimento e promover mais disposição e qualidade de vida no ambiente profissional.',
+    image: '/imagens/programa-ginastica/hero-programa-de-ginastica.webp',
+    imageAlt: 'Atividade de movimento num ambiente profissional',
+    imageCaption: 'Pausas ativas que se integram à rotina da equipa.',
+    items: [
+      { title: 'Pausas orientadas', description: 'Exercícios simples e acessíveis, conduzidos de forma adequada à equipa.' },
+      { title: 'Mais movimento', description: 'Momentos para interromper o sedentarismo e movimentar o corpo ao longo do expediente.' },
+      { title: 'Adaptação à rotina', description: 'Uma proposta que considera o espaço de trabalho e a dinâmica da organização.' }
+    ]
+  };
+
   constructor(private meta: Meta, private titleService: Title, @Inject(PLATFORM_ID) private platformId: Object) {}
 updateMetaTagsGinastica() {
   this.titleService.setTitle('Ginástica Laboral | Onda Branca');
